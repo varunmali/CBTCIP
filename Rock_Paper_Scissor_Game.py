@@ -34,3 +34,14 @@ def determine_victor(user_choice, opponent_choice):
       return "You win! Scissors cut paper."
     else:
       return "You lose! Rock crushes scissors."
+  
+# Function to handle user input and validation
+def get_user_choice():
+  while True:
+    user_choice = input("Choose rock, paper, or scissors (or 'q' to quit): ").lower()
+    if user_choice in ["rock", "paper", "scissors"]:
+      return user_choice
+    elif user_choice == 'q':
+      exit()
+    else:
+      print("Invalid choice. Please try again.")
